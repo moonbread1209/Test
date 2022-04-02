@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('98edb5e3b571d7f57b9e817c74d9082c');
+ Kakao.Link.createCustomButton({
+  container: '#kakao-link-btn',
+  templateId: ${74323},
+  templateArgs: {
+    'title': '💌 함께 온 메시지',
+    'description': '천옥 받아가세요.'
+  }
+});
